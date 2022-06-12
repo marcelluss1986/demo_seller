@@ -2,8 +2,8 @@ package com.mdss.seller.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.mdss.seller.entities.Order;
+import com.mdss.seller.entities.OrderItem;
 
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface OrderRepository extends JpaRepository<OrderItem, Long> {
 
 }
