@@ -23,5 +23,4 @@ public class UserResource {
 			List<User>obj = services.findAll();
 			return ResponseEntity.ok().body(obj);
 		}
-	
 }
