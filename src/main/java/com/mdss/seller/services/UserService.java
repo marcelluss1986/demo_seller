@@ -34,15 +34,15 @@ public class UserService {
 		}
 		
 		public User update(Long id, User obj) {
-			Optional<User> entity = repository.findById(id);
+			User entity = repository.getReferenceById(id);
 			updateData(entity, obj);
 			return repository.save(entity);
 			
 		}
 
-		private void updateData(Optional<User> entity, User obj) {
-			entity.get().setName(obj.getName());
-			entity.get().setEmail(obj.getEmail());
-			entity.get().setPhone(obj.getPhone());
+		private void updateData(User entity, User obj) {
+			entity.setName(obj.getName());
+			entity.setEmail(obj.getEmail());
+			entity.setPhone(obj.getPhone());
 		}
 }
